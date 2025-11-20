@@ -7,11 +7,127 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <title>OS Project</title>
+    
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+      
+      h1 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      
+      .btn-group {
+        margin: 10px;
+      }
+      
+      .btn-secondary {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-secondary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+      
+      .team-card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .team-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+      
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      }
+      
+      .team-member {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      .member-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
+      
+      .member-info h5 {
+        margin: 0;
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      
+      .member-info p {
+        margin: 5px 0 0 0;
+        color: #7f8c8d;
+        font-weight: 500;
+      }
+      
+      .team-section {
+        margin-top: 40px;
+      }
+      
+      .section-title {
+        text-align: center;
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-size: 28px;
+      }
+    </style>
   </head>
   <body>
-
 
     <div class="container">
         <h1 class="display-4">Deadlock And Process Synchronization Simulator</h1>
@@ -30,46 +146,53 @@
            Deadlock
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="deadlock.html">Single Instance</a></li>
                 <li><a class="dropdown-item" href="banker.html">Bankers</a></li>
             </ul>
           </div>
-          <br>       <br>       <br>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">SNO</th>
-                <th scope="col">Name</th>
-                <th scope="col">Roll No. </th>
-                <th scope="col">Email Id</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Anand Sriram</td>
-                <td>191IT105</td>
-                <td>anandsriram.191it105@nitk.edu.in</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Bhuvaneswar Dharmasivam</td>
-                <td>191IT107</td>
-                <td>bhuvanesward.191it107@nitk.edu.in</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Eshaan Ganesh</td>
-                <td>191IT216</td>
-                <td>eshaanganesh.191it216@nitk.edu.in</td>
-              <tr>
-                <th scope="row">2</th>
-                <td>Ritvik Mahesh</td>
-                <td>191IT246</td>
-                <td>ritvikmahesh.191it246@nitk.edu.in</td>
-              </tr>
-            </tbody>
-          </table>
+          
+          <div class="team-section">
+            <h2 class="section-title">
+              <i class="fas fa-users me-2"></i>Development Team
+            </h2>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="team-card">
+                  <div class="team-member">
+                    <div class="member-avatar">A</div>
+                    <div class="member-info">
+                      <h5>Ayush</h5>
+                      <p><i class="fas fa-id-card me-2"></i>Roll: 9923103193</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="team-card">
+                  <div class="team-member">
+                    <div class="member-avatar">U</div>
+                    <div class="member-info">
+                      <h5>Uttkarsh</h5>
+                      <p><i class="fas fa-id-card me-2"></i>Roll: 9923103196</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="team-card">
+                  <div class="team-member">
+                    <div class="member-avatar">P</div>
+                    <div class="member-info">
+                      <h5>Piyush</h5>
+                      <p><i class="fas fa-id-card me-2"></i>Roll: 9923103207</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     
